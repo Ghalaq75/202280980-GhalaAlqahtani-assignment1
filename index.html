@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghala Alqahtani | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Ghala Alqahtani</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="greeting" id="greeting">Hello!</h1>
+                <h2 class="hero-title">I'm Ghala Alqahtani</h2>
+                <p class="hero-tagline">Software Engineering Student | AI Researcher | Building Secure & Intelligent Solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image">
+                        <img src="assets/images/profile.jpg" alt="Ghala Alqahtani - Software Engineering Student" class="profile-img">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>I'm a Software Engineering student at KFUPM with a strong programming foundation, I'm passionate about applying AI technologies to develop secure, real-world software solutions. My research interests include digital psychiatry and machine.</p>
+                    <div class="skills-tags">
+                        <span class="tag">Software Engineering</span>
+                        <span class="tag">AI & Machine Learning</span>
+                        <span class="tag">Web Development</span>
+                        <span class="tag">Database Systems</span>
+                        <span class="tag">Cybersecurity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-image">
+                            <img src="assets/images/project1.jpg" alt="Distributed Storage System Architecture">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Distributed Storage System</h3>
+                        <p>Built a multi-threaded distributed storage system using socket programming, supporting file storage, retrieval, and fault tolerance with parity-based recovery mechanisms.</p>
+                        <div class="project-tags">
+                            <span class="tag-small">Java</span>
+                            <span class="tag-small">Socket Programming</span>
+                            <span class="tag-small">Multi-threading</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-image">
+                            <img src="assets/images/project2.jpg" alt="Sun Devil Dining Subscription System">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sun Devil Dining System</h3>
+                        <p>Designed and implemented a publisher-subscriber system in Java to match diners with restaurant availability using UML-based software analysis and design principles.</p>
+                        <div class="project-tags">
+                            <span class="tag-small">Java</span>
+                            <span class="tag-small">UML Design</span>
+                            <span class="tag-small">Pub-Sub Pattern</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-image">
+                            <img src="assets/images/project3.jpg" alt="KFUPM Events Management System Interface">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>KFUPM Events Management System</h3>
+                        <p>Collaborated on designing and prototyping a centralized university events platform, producing comprehensive requirements, UML diagrams, and a usability-focused prototype.</p>
+                        <div class="project-tags">
+                            <span class="tag-small">Software Design</span>
+                            <span class="tag-small">UML</span>
+                            <span class="tag-small">Prototyping</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-image">
+                            <img src="assets/images/project4.jpg" alt="Digital Psychiatry AI Research">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Digital Psychiatry Research</h3>
+                        <p>Conducting research on embedding AI in digital diagnosis to enhance detection accuracy. Analyzing patient symptoms using machine learning algorithms. Published in KFUPM Journal.</p>
+                        <div class="project-tags">
+                            <span class="tag-small">Machine Learning</span>
+                            <span class="tag-small">AI</span>
+                            <span class="tag-small">Research</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-intro">Interested in collaboration, research opportunities, or just want to connect? Feel free to reach out!</p>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            
+            <div class="form-success" id="formSuccess">
+                <p>✓ Thank you! Your message has been sent.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Ghala Alqahtani | ghalaq75@gmail.com | Dhahran, Saudi Arabia</p>
+            <p>&copy; 2024 Built with passion for software engineering and innovation.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
