@@ -1,4 +1,4 @@
-# 202280980-ghala-alqahtani-assignment1
+# 202280980-GhalaAlqahtani-assignment1
 
 A responsive personal portfolio website showcasing my software engineering projects, research experience, and technical skills. Features a calming Como theme with light/dark mode toggle and smooth user interactions.
 
