@@ -4,7 +4,7 @@ A responsive personal portfolio website showcasing my software engineering proje
 
 ## 👩‍💻 About
 
-I'm Ghala Alqahtani, a Software Engineering student at KFUPM (CGPA: 3.788) and current exchange student at Arizona State University. This portfolio showcases my journey in software development, AI research, and system design.
+I'm Ghala Alqahtani, a Software Engineering student at KFUPM. This portfolio showcases my journey in software development, AI research, and system design.
 
 ## 🌟 Features
 
@@ -17,11 +17,10 @@ I'm Ghala Alqahtani, a Software Engineering student at KFUPM (CGPA: 3.788) and c
 
 ## 🛠️ Technologies Used
 
-- HTML5
-- CSS3 (Grid, Flexbox, CSS Variables)
-- Vanilla JavaScript (ES6+)
-- Local Storage API
-- Intersection Observer API
+- HTML
+- CSS (Grid, Flexbox, CSS Variables)
+- JavaScript
+
 
 ## 📁 Project Structure
 
@@ -52,12 +51,12 @@ assignment-1/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/202280980-ghala-alqahtani-assignment1.git
+git clone https://github.com/yourusername/202280980-GhalaAlqahtani-assignment1.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd 202280980-ghala-alqahtani-assignment1
+cd 202280980-GhalaAlqahtani-assignment1
 ```
 
 3. Open `index.html` in your browser:
@@ -85,7 +84,6 @@ This project was developed with assistance from AI tools to enhance productivity
 
 **AI Tools Used**:
 - Claude (Anthropic) - Code generation, debugging, and documentation
-- GitHub Copilot - Code completion and suggestions
 
 ## 📝 Features Breakdown
 
@@ -129,10 +127,6 @@ The Como theme features:
 - Safari (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
-## 📄 License
-
-This project is created for educational purposes as part of a web development course assignment.
-
 ## 👤 Author
 
 **Ghala Alqahtani**  
@@ -144,7 +138,6 @@ Student ID: 202280980
 
 - [Technical Documentation](docs/technical-documentation.md)
 - [AI Usage Report](docs/ai-usage-report.md)
-- [Live Demo](#) (Add your deployment link here)
 
 ## 📮 Contact
 
@@ -152,4 +145,3 @@ Feel free to reach out through the contact form on the website or connect with m
 
 ---
 
-**Built with care and creativity** ✨
