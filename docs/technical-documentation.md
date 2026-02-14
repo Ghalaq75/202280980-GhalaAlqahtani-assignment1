@@ -588,5 +588,5 @@ This portfolio website demonstrates modern web development practices with clean,
 ---
 
 **Document Version**: 1.0  
-**Last Updated**: February 2024  
+**Last Updated**: 13 February 2026
 **Author**: Ghala Alqahtani (202280980)
