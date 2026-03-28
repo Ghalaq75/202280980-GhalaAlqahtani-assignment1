@@ -1,187 +1,96 @@
-# AI Usage Report
+# AI Usage Report – Assignment 2
 
-
-## 1. Tools Used & Use Cases
-
-### Claude (Anthropic)
-**Primary Tool for Development**
-
-#### Use Cases:
-1. **Project Architecture & Planning**
-   - Generated initial project structure and file organization
-   - Helped determine best practices for folder hierarchy
-   - Suggested semantic HTML structure for better accessibility
-
-2. **HTML Development**
-   - Created semantic HTML5 structure with proper sections
-   - Generated accessible form elements with labels and placeholders
-   - Implemented navigation structure with smooth scrolling links
-   - Added meta tags for better SEO and viewport configuration
-
-3. **CSS Styling**
-   - Developed comprehensive CSS with CSS Variables for theming
-   - Created responsive grid and flexbox layouts
-   - Implemented light/dark mode color schemes with the "como" theme
-   - Generated smooth animations and transitions
-   - Built mobile-first responsive design with media queries
-
-4. **JavaScript Functionality**
-   - Implemented theme toggle with localStorage persistence
-   - Created time-based greeting functionality
-   - Built smooth scrolling navigation system
-   - Developed form validation and submission handling
-   - Added Intersection Observer for scroll animations
-   - Implemented active navigation highlighting
-
-
-
-## 2. Benefits & Challenges
-
-### Benefits
-
-#### Accelerated Development
-- **Time Savings**: Tasks that would normally take hours were completed shortly
-- **Rapid Prototyping**: Quickly generated working code to test different design approaches
-- **Instant Documentation**: Generated comprehensive comments and documentation alongside code
-
-#### Learning Enhancement
-- **Best Practices**: AI suggested modern web development patterns.
-- **Code Quality**: Learned about semantic HTML, accessibility features, and proper code organization
-- **Problem Solving**: AI explained concepts when I encountered unfamiliar patterns or issues
-
-#### Code Quality Improvements
-- **Consistency**: Maintained consistent naming conventions and code structure
-- **Error Prevention**: AI caught potential issues before they became problems
-- **Optimization**: Suggested more efficient approaches to common tasks
-
-#### Creative Inspiration
-- **Design Ideas**: AI provided creative suggestions for the "como" theme color palette
-- **Feature Suggestions**: Proposed interactive features like time-based greeting and scroll animations
-- **Layout Options**: Offered multiple approaches to responsive design problems
-
-### Challenges
-
-#### Learning Curve
-- **Initial Setup**: Took time to learn how to effectively prompt AI for desired results
-- **Understanding Output**: Sometimes AI-generated code required research to fully understand
-- **Context Limitations**: Had to break down complex requests into smaller, manageable parts
-
-#### Over-Reliance Risk
-- **Dependency Concern**: Needed to be mindful not to become too dependent on AI assistance
-- **Understanding Gap**: Sometimes accepted code without fully understanding it initially
-- **Skill Development**: Made sure to study generated code to maintain my own skill growth
-
-#### Code Verification
-- **Testing Required**: AI-generated code always needed manual testing and verification
-- **Edge Cases**: Some generated solutions didn't handle all edge cases initially
-
+**Student:** Ghala Alqahtani  
+**Student ID:** 202280980  
+**Assignment:** Assignment 2 – Interactive Features  
+**Date:** 2026
 
 ---
 
-## 3. Learning Outcomes
+## Overview
 
-#### HTML5 & Semantic Structure
-- Learned the importance of semantic HTML elements (`<section>`, `<article>`, `<nav>`)
-- Understood proper use of heading hierarchy for accessibility
-- Gained experience with form elements and validation attributes
-
-#### CSS & Modern Styling
-- **CSS Variables**: Learned to use CSS custom properties for theming
-- **Grid & Flexbox**: Understood when to use each layout system
-- **Responsive Design**: Learned mobile-first approach and breakpoint strategies
-- **Animations**: Gained experience with CSS transitions and keyframe animations
-- **Dark Mode**: Learned to implement theme switching with CSS variables
-
-#### JavaScript
-- **DOM Manipulation**: Practiced selecting and modifying elements
-- **Event Listeners**: Learned different event types and handling strategies
-- **Local Storage**: Understood browser storage for persistence
-- **Modern APIs**: Used Intersection Observer for scroll animations
-- **Arrow Functions**: Practiced modern JavaScript syntax
-- **Template Literals**: Used for dynamic string generation
-
-#### Web Development Workflow
-1. **Planning**: Importance of structure before coding
-2. **Development**: Iterative process of building and testing
-3. **Optimization**: Refining code for performance and maintainability
-4. **Documentation**: Writing clear documentation alongside development
-
-#### Problem-Solving Approach
-- Breaking complex problems into smaller tasks
-- Testing incrementally rather than all at once
-- Debugging systematically when issues arise
-- Seeking multiple solutions before choosing the best one
-
+This document describes how AI tools were used during the development of Assignment 2. All AI-generated content was reviewed, understood, and modified before being included in the project.
 
 ---
 
-## 4. Responsible Use & Modifications
+## AI Tool Used
 
-### Code Review Process
+| Tool | Version | Purpose |
+|---|---|---|
+| Claude (Anthropic) | Claude Sonnet | Code generation, debugging, documentation |
 
-#### 1. Initial Generation
-- Used AI to generate foundational code structure
-- Requested explanations for complex sections
-- Asked for code comments during generation
+---
 
-#### 2. Understanding Phase
-For each AI-generated section, I:
-- Read through the entire code carefully
-- Looked up unfamiliar functions or properties
-- Tested each feature individually
-- Compared with examples from official documentation
+## How AI Was Used
 
-#### 3. Customization & Modification
+### 1. Live Project Search Feature
 
-**Example 1: Theme Colors**
-- **AI Generated**: Generic blue theme
-- **My Modification**: Changed to custom Como theme with muted greens and earthy tones
+**What I asked:** I asked Claude to help me design a live search function that filters project cards as the user types, searches across title, description, and technology tags, and highlights matched text.
 
-**Example 2: Greeting Function**
-- **AI Generated**: Simple time-based greeting
-- **My Modification**: Added emoji and more personality
-```javascript
-// Added emojis for visual interest
-if (currentHour < 12) {
-    greeting = 'Good Morning! ☀️';
-}
-```
+**What AI generated:** A `filterProjects()` function using `querySelector`, `classList.add/remove('hidden')`, and a `highlightText()` helper that uses a regex to wrap matched substrings in a `<mark>` element.
 
-**Example 3: Form Handling**
-- **AI Generated**: Basic form submission
-- **My Modification**: Added success message with timeout and animation
-```javascript
-// Enhanced with visual feedback and auto-hide
-setTimeout(() => {
-    successMessage.classList.remove('show');
-}, 5000);
-```
+**What I changed:**
+- Added the `data-title` and `data-tags` attributes to the HTML cards myself, based on my actual project information.
+- Added the result count label ("Showing X of Y projects") as an extra touch not in the original suggestion.
+- Adjusted the empty-state message text to match my portfolio's tone.
 
-### Quality Assurance
+**What I learned:** How `IntersectionObserver` and CSS class toggling can replace heavier jQuery DOM manipulation, and how to use `RegExp` safely with user input by escaping special characters via `escapeRegex()`.
 
-#### Testing Protocol
-1. **Browser Testing**: Tested in Chrome, Firefox, and Safari
-2. **Device Testing**: Verified on desktop, tablet.
-3. **Feature Testing**: Ensured all interactive elements worked properly
-4. **Performance Testing**: Checked load times and animation smoothness
+---
 
-### Originality Measures
+### 2. API Quotes Feature
 
-#### Personal Touches
-1. **Content Creation**: All text content is personally written
-2. **Design Choices**: Selected "como" theme based on personal aesthetic preference
-3. **Feature Selection**: Chose which interactive features to include
-4. **Layout Decisions**: Made final decisions on spacing, sizing, and organization
+**What I asked:** I asked Claude to show me how to fetch data from a free, CORS-enabled public API and display it with a loading state, error handling, and a fallback.
 
-### Academic Integrity Compliance
+**What AI generated:** An `async fetchQuote()` function using the `Fetch API` with `AbortSignal.timeout()` for a timeout, a try/catch block for error handling, and DOM updates to show loading dots, quote content, or error state.
 
-#### Transparent Attribution
-- Documented all AI usage in this report
-- Clearly stated which tools were used and how
-- Acknowledged AI assistance in README
+**What I changed:**
+- Chose the specific API endpoint tag filter (`technology|success|learning|knowledge|science`) to make quotes relevant to a tech portfolio.
+- Wrote the fallback quotes list myself, selecting quotes I personally find meaningful.
+- Added the "New Quote ↻" button and wired it to call `fetchQuote()` again — this was my own addition.
+- Styled the quote box with a left border accent and loading dot animation in CSS, which I designed based on the existing Como theme.
 
+**What I learned:** How to use `AbortSignal.timeout()` to prevent hanging requests, and why CORS matters when choosing a public API (some APIs require a proxy server).
 
+---
 
-**Prepared by**: Ghala Alqahtani (202280980)  
-**Date**: February 2026  
-**Assignment**: Foundation & AI Integration
+### 3. Improved Form Validation
+
+**What I asked:** I asked Claude to improve the existing form to show per-field inline error messages with animations instead of relying only on the browser's built-in HTML5 validation.
+
+**What AI generated:** A `validateField()` function that checks for empty fields and valid email format, toggling an `.invalid` CSS class and populating a `<span class="field-error">` element.
+
+**What I changed:**
+- Added the `blur` event so errors only show after the user leaves a field (less aggressive UX).
+- Added the `input` event to clear errors as the user corrects them.
+- Wrote the shake `@keyframes` animation myself to give invalid fields a physical feedback feel.
+- Disabled the submit button during the simulated send delay — I added this myself to prevent double submissions.
+
+**What I learned:** The difference between `required` HTML validation and custom JavaScript validation, and why progressive disclosure of errors (on blur rather than immediately) is better UX.
+
+---
+
+### 4. Documentation
+
+**What I asked:** I asked Claude to review my README structure and suggest improvements for clarity.
+
+**What AI generated:** A table-based features summary and a structured "Requirements Met" section.
+
+**What I changed:**
+- Rewrote all feature descriptions in my own words to reflect what I actually built.
+- Added the API fallback note under "Getting Started" myself.
+- Wrote the AI Usage Report (this document) entirely myself, only using Claude to check grammar.
+
+---
+
+## Reflection
+
+Using AI tools significantly accelerated the development process, especially for boilerplate code like the Fetch API pattern and regex escaping. However, I had to understand the generated code deeply before I could integrate it correctly — for example, I needed to understand how `AbortSignal.timeout()` works and why I needed `escapeRegex()` before the `filterProjects()` function was safe to use.
+
+The most valuable learning came from adapting the AI output to my specific context: choosing the right API, writing my own fallback quotes, and deciding how validation errors should behave. AI helped me move faster, but the decisions about what to build and why were always mine.
+
+---
+
+## Academic Integrity Statement
+
+All AI-generated code was reviewed, understood, and modified. No AI output was submitted unmodified. This report transparently documents every instance of AI assistance in this assignment.
