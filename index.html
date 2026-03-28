@@ -29,24 +29,6 @@
                 <h1 class="greeting" id="greeting">Hello!</h1>
                 <h2 class="hero-title">I'm Ghala Alqahtani</h2>
                 <p class="hero-tagline">Software Engineering Student | AI Researcher | Building Secure & Intelligent Solutions</p>
-
-                <!-- Quote Box (API-powered) -->
-                <div class="quote-box" id="quoteBox">
-                    <div class="quote-loading" id="quoteLoading">
-                        <span class="loading-dot"></span>
-                        <span class="loading-dot"></span>
-                        <span class="loading-dot"></span>
-                        <span class="loading-text">Fetching inspiration...</span>
-                    </div>
-                    <div class="quote-content" id="quoteContent" style="display:none;">
-                        <p class="quote-text" id="quoteText"></p>
-                        <p class="quote-author" id="quoteAuthor"></p>
-                    </div>
-                    <div class="quote-error" id="quoteError" style="display:none;">
-                        <p>✦ Could not load quote. <button class="retry-btn" id="retryQuote">Try again</button></p>
-                    </div>
-                    <button class="new-quote-btn" id="newQuoteBtn" style="display:none;">New Quote ↻</button>
-                </div>
             </div>
         </div>
     </section>
@@ -57,10 +39,12 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="assets/images/profile.jpg" alt="Ghala Alqahtani - Software Engineering Student" class="profile-img">
+                    <div class="about-image">
+                        <img src="assets/images/profile.jpg" alt="Ghala Alqahtani - Software Engineering Student" class="profile-img">
+                    </div>
                 </div>
                 <div class="about-text">
-                    <p>I'm a Software Engineering student at KFUPM with a strong programming foundation, I'm passionate about applying AI technologies to develop secure, real-world software solutions. My research interests include digital psychiatry and machine learning.</p>
+                    <p>I'm a Software Engineering student at KFUPM with a strong programming foundation, I'm passionate about applying AI technologies to develop secure, real-world software solutions. My research interests include digital psychiatry and machine.</p>
                     <div class="skills-tags">
                         <span class="tag">Software Engineering</span>
                         <span class="tag">AI & Machine Learning</span>
@@ -77,28 +61,13 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">My Projects</h2>
-
-            <!-- Live Search Bar -->
-            <div class="search-wrapper">
-                <div class="search-bar">
-                    <span class="search-icon">🔍</span>
-                    <input
-                        type="text"
-                        id="projectSearch"
-                        placeholder="Search projects by name or technology..."
-                        autocomplete="off"
-                        aria-label="Search projects"
-                    >
-                    <button class="clear-search" id="clearSearch" aria-label="Clear search" style="display:none;">✕</button>
-                </div>
-                <p class="search-results-count" id="searchCount"></p>
-            </div>
-
-            <div class="projects-grid" id="projectsGrid">
+            <div class="projects-grid">
                 <!-- Project 1 -->
-                <article class="project-card" data-title="Distributed Storage System" data-tags="java socket programming multi-threading distributed storage fault tolerance">
+                <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/project1.jpg" alt="Distributed Storage System Architecture">
+                        <div class="project-image">
+                            <img src="assets/images/project1.jpg" alt="Distributed Storage System Architecture">
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Distributed Storage System</h3>
@@ -112,9 +81,11 @@
                 </article>
 
                 <!-- Project 2 -->
-                <article class="project-card" data-title="Sun Devil Dining System" data-tags="java uml design pub-sub pattern dining subscription publisher subscriber">
+                <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/project2.jpg" alt="Sun Devil Dining Subscription System">
+                        <div class="project-image">
+                            <img src="assets/images/project2.jpg" alt="Sun Devil Dining Subscription System">
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Sun Devil Dining System</h3>
@@ -128,9 +99,11 @@
                 </article>
 
                 <!-- Project 3 -->
-                <article class="project-card" data-title="KFUPM Events Management System" data-tags="software design uml prototyping events management university requirements">
+                <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/project3.jpg" alt="KFUPM Events Management System Interface">
+                        <div class="project-image">
+                            <img src="assets/images/project3.jpg" alt="KFUPM Events Management System Interface">
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>KFUPM Events Management System</h3>
@@ -144,9 +117,11 @@
                 </article>
 
                 <!-- Project 4 -->
-                <article class="project-card" data-title="Digital Psychiatry Research" data-tags="machine learning ai research digital psychiatry diagnosis algorithms published">
+                <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/project4.jpg" alt="Digital Psychiatry AI Research">
+                        <div class="project-image">
+                            <img src="assets/images/project4.jpg" alt="Digital Psychiatry AI Research">
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Digital Psychiatry Research</h3>
@@ -159,13 +134,6 @@
                     </div>
                 </article>
             </div>
-
-            <!-- Empty state when no results -->
-            <div class="empty-state" id="emptyState" style="display:none;">
-                <p class="empty-icon">🔎</p>
-                <p class="empty-title">No projects found</p>
-                <p class="empty-subtitle">Try a different keyword, like "Java", "AI", or "UML".</p>
-            </div>
         </div>
     </section>
 
@@ -175,23 +143,20 @@
             <h2 class="section-title">Get In Touch</h2>
             <p class="contact-intro">Interested in collaboration, research opportunities, or just want to connect? Feel free to reach out!</p>
             
-            <form class="contact-form" id="contactForm" novalidate>
+            <form class="contact-form" id="contactForm">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
-                    <span class="field-error" id="nameError"></span>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
                 </div>
                 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="your.email@example.com" autocomplete="email">
-                    <span class="field-error" id="emailError"></span>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
                 </div>
                 
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Your message here..."></textarea>
-                    <span class="field-error" id="messageError"></span>
+                    <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
                 </div>
                 
                 <button type="submit" class="submit-btn">Send Message</button>
